@@ -1,10 +1,17 @@
 import React from 'react';
 
-function Input() {
+function Input({ colorValue, setColorValue }) {
   return (
     <form className='input' onChange={(e) => e.preventDefault()}>
       <label htmlFor='search'>Search</label>
-      <input type='text' placeholder='Search Color' />
+      <input
+        autoFocus
+        type='text'
+        placeholder='Search Color'
+        value={colorValue}
+        required
+        onChange={(e) => setColorValue(e.target.value)}
+      />
     </form>
   );
 }
