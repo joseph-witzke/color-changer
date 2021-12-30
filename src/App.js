@@ -10,7 +10,7 @@ function App() {
   return (
     <div className='App'>
       <Square colorValue={colorValue} />
-      <Input />
+      <Input colorValue={colorValue} setColorValue={setColorValue} />
     </div>
   );
 }
